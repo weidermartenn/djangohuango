@@ -1,0 +1,37 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Django Tailwind{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% tailwind_css %}
+</head>
+<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+	<!-- Header -->
+    <header class="bg-gray-800 text-white p-4">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">My Website</a>
+            <ul class="flex space-x-4">
+                <li><a href="/" class="hover:text-gray-300">Home</a></li>
+                <li><a href="/about" class="hover:text-gray-300">About</a></li>
+                <li><a href="/contact" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mx-auto">
+        {% block content %}
+        <!-- Контент каждой страницы будет вставляться сюда -->
+        {% endblock %}
+    </div>
+
+	<!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

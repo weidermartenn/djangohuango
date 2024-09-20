@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "djangohuango"
+version = "0.1.0"
+description = ""
+authors = ["weidermartenn <weidermartenn@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1.1"
+django-tailwind = "^3.8.0"
+django-browser-reload = "^1.15.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
