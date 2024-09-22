@@ -42,6 +42,9 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
+        fontFamily: {
+            'body' : ['"Inter"', ],
+        },
         extend: {},
     },
     plugins: [
