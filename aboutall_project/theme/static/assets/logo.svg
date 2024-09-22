@@ -1,0 +1,10 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" stroke="null">
+ <g id="Слой_1">
+  <title>Слой 1</title>
+  <line stroke-width="5" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="30.33333" x2="57.22222" y1="30.33333" x1="2.88889" fill="none"/>
+  <line transform="rotate(-0.342695 10.2778 30.3889)" stroke-width="6" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="10.22222" x2="10.55556" y1="50.55555" x1="10" stroke="#000" fill="none"/>
+  <path stroke-width="6" id="svg_6" d="m8.11467,13.26277l20.77778,-0.11111" opacity="undefined" stroke-linecap="undefined" stroke-linejoin="undefined" stroke="#000" fill="none"/>
+  <line stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_7" y2="10.20618" x2="49.58763" y1="30.20618" x1="29.89691" stroke="#000" fill="none"/>
+  <line stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_8" y2="50.87628" x2="50.26914" y1="8.4577" x1="50.37223" fill="none"/>
+ </g>
+</svg>
