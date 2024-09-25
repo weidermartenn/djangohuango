@@ -9,37 +9,44 @@
     <link rel="shortcut icon" href="{% static 'assets/favicon-32x32.png' %}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {% tailwind_css %}
 </head>
 
-<body class="leading-normal tracking-normal overflow-y-hidden" style="background-image: url('../static/assets/background.svg');">
-	<!-- Header -->
-    <header class="bg-slate-50 text-black p-4 shadow-2xl fixed w-full">
-        <nav class="container mx-auto flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2">
-                <img src="{% static 'assets/logo.svg' %}" class="w-20 h-10 mr-2" alt="Logo">
-                <p class="font-bold italic text-2xl duration-200">ABOUT ALL by F14</p>
-            </a>
-            <ul class="flex space-x-4">
-                <li><a href="/weather/" class="hover:text-gray-300 duration-200">Погода</a></li>
-                <li><a href="#" class="hover:text-gray-300 duration-200">Курсы валют</a></li>
-                <li><a href="#" class="hover:text-gray-300 duration-200">Об авторе</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="font-body leading-normal tracking-normal">
+  <!-- Header -->
+  <header class="text-black p-4 shadow-2xl fixed w-full bg-white z-20">
+      <nav class="container mx-auto flex justify-between items-center">
+          <a href="/" class="flex items-center gap-2">
+              <img src="{% static 'assets/logo.svg' %}" class="w-14 h-14 mr-2" alt="Logo">
+              <p class="text-md">Сайт с использованием <br> различных API</p>
+          </a>
+      </nav>
+  </header>
 
-    <div class="container mx-auto">
-        {% block content %}
-        <!-- Контент каждой страницы будет вставляться сюда -->
-        {% endblock %}
+  <!-- Main container with grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr]">
+    <!-- Sidebar -->
+    <aside class="flex flex-col bg-slate-50 shadow-md pl-4 pt-28 z-10">
+        <ul class="mt-4 font-medium">
+            <li><a href="/" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Главная</a></li>
+            <li><a href="/weather" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Погода</a></li>
+            <li><a href="#" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Курс валют</a></li>
+            <li><a href="#" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Об авторе</a></li>
+            <li><a href="/admin" target="_blank" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Админ</a></li>
+            <li><a href="https://github.com/weidermartenn/project4emp.git" target="_blank" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Github проекта</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main content -->
+    <div class="flex flex-col">
+      <div class="container mx-auto">
+          {% block content %}
+          <!-- Контент каждой страницы будет вставляться сюда -->
+          {% endblock %}
+      </div>
     </div>
-
-	<!-- Footer -->
-    <footer class="bg-slate-50 pb-10 text-black">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 AboutAll by f14</p>
-        </div>
-    </footer>
+</div>
 </body>
 </html>

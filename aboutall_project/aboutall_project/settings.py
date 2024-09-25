@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'django_browser_reload',
+    'weather_app'
 ]
 
 TAILWIND_APP_NAME = 'theme'
