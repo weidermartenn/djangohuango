@@ -5,17 +5,49 @@
 {% block content %}
 <div class="flex flex-col items-center h-screen pl-4 pt-28">
     <div class="mt-8">
-        <input type="text" placeholder="Введите город" class="p-2 border border-gray-800 rounded-md mr-2 focus:outline-none">
-        <button class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 duration-150">Узнать</button>
+        <form method="post" action="{% url 'weather' %}">
+            {% csrf_token %}
+            <input type="text" name="city_name" placeholder="Введите город" class="p-2 border border-gray-800 rounded-md mr-2 focus:outline-none">
+            <button type="submit" class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 duration-150">Узнать</button>
+        </form>
     </div>
-    <div class="grid grid-cols-1 mt-20 border-2 border-gray-800 rounded-md p-6">
-        <div class="flex flex-row items-center gap-4 border-b-2 border-gray-800 p-4">
+
+    {% if weather_data %}
+    <div class="grid grid-cols-1 mt-20 border-2 border-gray-800 rounded-md p-6 w-1/2">
+        <section class="flex flex-row items-center mt-2 gap-4 justify-center">
+            <img src="../static/assets/icon-watch.svg" class="w-12 h-12">
+            <p id="local-time">Время: </p>  <!-- Изменено -->
+        </section>
+        <div class="flex flex-row items-center justify-center gap-4 border-b-2 border-gray-800 p-4">
             <img src="../static/assets/icon-clouds.svg" class="w-12 h-12">
-            <p class="text-3xl">Москва</p>
+            <p class="text-3xl">{{ weather_data.city}}</p>
+            <p class="text-3xl">{{ weather_data.temperature }} °C</p>
         </div>
-        <div>
-            
+        <p class="mt-4 justify-self-center">Ощущается как {{ weather_data.feels_like }} °C</p>
+        <div class="mt-4 flex flex-col gap-2 text-sm text-start">
+            <section class="flex flex-row gap-4 items-center">
+                <img src="../static/assets/icon-mintemp.svg" class="w-10 h-10">
+                <p>Минимальная температура: {{ weather_data.min_temp }} °C</p>
+            </section>
+            <section class="flex flex-row gap-4 items-center">
+                <img src="../static/assets/icon-maxtemp.svg" class="w-10 h-10">
+                <p>Минимальная температура: {{ weather_data.max_temp }} °C</p>
+            </section>
+            <section class="flex flex-row gap-4 items-center">
+                <img src="../static/assets/icon-wind.svg" class="w-10 h-10">
+                <p>Ветер: {{ weather_data.wind_speed }} м/с</p>
+            </section>
+            <section class="flex flex-row gap-4 items-center">
+                <img src="../static/assets/icon-humidity.svg" class="w-10 h-10">
+                <p>Влажность: {{ weather_data.humidity }}%</p>
+            </section>
+            <section class="flex flex-row gap-4 items-center">
+                <img src="../static/assets/icon-pressure.svg" class="w-10 h-10">
+                <p>Давление: {{ weather_data.pressure }} мм</p>
+            </section>
         </div>
     </div>
+    {% endif %}
 </div>
+
 {% endblock %}

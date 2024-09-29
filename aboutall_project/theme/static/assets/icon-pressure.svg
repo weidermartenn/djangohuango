@@ -1,0 +1,22 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" stroke="null">
+ <g id="Слой_1">
+  <title>Слой 1</title>
+  <line id="svg_10" y2="9.64984" x2="-15.00515" y1="9.54686" x1="-15.00515" stroke="#333333" fill="none"/>
+  <line id="svg_21" y2="18.49732" x2="79.83702" y1="18.49732" x1="79.92634" stroke-width="2" stroke="#191919" fill="none"/>
+  <path id="svg_35" d="m14.5925,7.59921c-1.47823,3.60901 -3.63871,7.10431 -1.36452,10.71332c2.27419,3.60901 2.50161,5.62608 0,9.57622c-2.50161,3.95014 -3.63871,7.90027 0.11371,11.05444c3.75242,3.15417 -0.22742,8.24141 -0.11371,11.85042" opacity="undefined" stroke-width="4" stroke="#191919" fill="none"/>
+  <path id="svg_37" d="m27.21428,7.59921c-1.47823,3.60901 -3.63872,7.10431 -1.36452,10.71332c2.27419,3.60901 2.50161,5.62608 0,9.57622c-2.50161,3.95014 -3.63871,7.90027 0.11371,11.05444c3.75242,3.15417 -0.22742,8.24141 -0.11371,11.85042" opacity="undefined" stroke-width="4" stroke="#191919" fill="none"/>
+  <path transform="rotate(45 13.7395 50.5634)" stroke="#191919" id="svg_38" d="m14.45626,49.83442l0,1.45788l-1.4335,0l1.4335,-1.45788z" opacity="undefined" stroke-width="4" fill="#191919"/>
+  <path transform="rotate(45 26.3613 50.4497)" stroke="#191919" id="svg_39" d="m27.07804,49.72071l0,1.45788l-1.4335,0l1.4335,-1.45788z" opacity="undefined" stroke-width="4" fill="#191919"/>
+  <line stroke="#191919" id="svg_40" y2="8.32019" x2="53.99276" y1="8.20648" x1="38.52823" stroke-width="4" fill="none"/>
+  <line id="svg_41" y2="16.05245" x2="76.05245" y1="15.93874" x1="75.82503" stroke-width="4" stroke="#191919" fill="none"/>
+  <line stroke="#191919" id="svg_42" y2="50.73392" x2="51.83227" y1="7.52422" x1="51.94598" stroke-width="4" fill="none"/>
+  <path transform="rotate(-1 46.318 51.0582)" stroke="#191919" id="svg_43" d="m38.75719,50.94446l15.12171,0.22742" opacity="undefined" stroke-width="4" fill="none"/>
+  <line id="svg_44" y2="40.95488" x2="84.69439" y1="40.95488" x1="84.58068" stroke-width="4" stroke="#191919" fill="none"/>
+  <line id="svg_45" y2="15.59761" x2="51.49114" y1="15.4839" x1="43.64517" stroke-width="4" stroke="#191919" fill="none"/>
+  <line id="svg_46" y2="43.79763" x2="43.87259" y1="43.79763" x1="51.71856" stroke-width="4" stroke="#191919" fill="none"/>
+  <line id="svg_47" y2="36.40649" x2="47.5113" y1="36.40649" x1="51.15001" stroke-width="4" stroke="#191919" fill="none"/>
+  <line id="svg_48" y2="22.42019" x2="47.28388" y1="22.42019" x1="50.46775" stroke-width="4" stroke="#191919" fill="none"/>
+  <line id="svg_49" y2="29.35649" x2="43.75888" y1="29.35649" x1="51.60485" stroke-width="4" stroke="#191919" fill="none"/>
+ </g>
+
+</svg>

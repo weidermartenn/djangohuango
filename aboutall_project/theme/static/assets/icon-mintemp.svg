@@ -1,0 +1,25 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" stroke="null">
+ <g id="Слой_1">
+  <title>Слой 1</title>
+  <line id="svg_8" y2="34.98455" x2="77.06488" y1="34.98455" x1="76.85891" stroke="#333333" fill="none"/>
+  <line id="svg_10" y2="9.64984" x2="-15.00515" y1="9.54686" x1="-15.00515" stroke="#333333" fill="none"/>
+  <line id="svg_20" y2="30.73329" x2="75.37134" y1="30.73329" x1="75.1034" stroke-width="2" stroke="#191919" fill="none"/>
+  <line id="svg_21" y2="18.49732" x2="79.83702" y1="18.49732" x1="79.92634" stroke-width="2" stroke="#191919" fill="none"/>
+  <g id="svg_33">
+   <line stroke="#333333" id="svg_14" y2="5.97425" x2="11.72153" y1="41.60762" x1="11.41257" stroke-width="2" fill="none"/>
+   <line stroke="#333333" id="svg_15" y2="5.97425" x2="19.03358" y1="40.78373" x1="18.93059" stroke-width="2" fill="none"/>
+   <ellipse ry="9.11431" rx="8.54789" id="svg_16" cy="49.17714" cx="15.32606" stroke-width="2" stroke="#333333" fill="none"/>
+   <path id="svg_17" d="m11.72153,6.59217c0.01716,-0.77669 0.01719,-1.57052 0.06864,-2.33007c0.18894,-0.58767 0.37762,-1.02122 0.80682,-1.36877c0.36057,-0.39884 0.80684,-0.57484 1.28741,-0.69942c0.61787,-0.22719 1.2186,-0.31768 1.85362,-0.23591c0.55764,0.08119 0.82401,0.14551 1.21009,0.24438c0.45478,0.18463 0.92672,0.36913 1.27865,0.74246c0.30033,0.39057 0.56638,0.81541 0.72959,1.39451c0.16287,0.61368 0.05149,1.29591 0.07723,1.94387" opacity="undefined" stroke-width="2" stroke="#333333" fill="none"/>
+   <ellipse ry="3.30461" rx="3.34926" id="svg_18" cy="49.44545" cx="15.20576" stroke-width="2" stroke="#191919" fill="#191919"/>
+   <line id="svg_19" y2="28.81399" x2="15.25042" y1="47.65917" x1="15.16111" stroke-width="2" stroke="#191919" fill="none"/>
+   <path transform="rotate(-2 23.1993 12.291)" stroke="#191919" id="svg_27" d="m19.89585,12.16301l6.60698,0.25591" opacity="undefined" fill="none"/>
+   <line id="svg_28" y2="17.7391" x2="26.41463" y1="17.7391" x1="19.89473" stroke="#191919" fill="none"/>
+   <line id="svg_29" y2="23.36586" x2="26.41463" y1="23.36586" x1="19.98404" stroke="#191919" fill="none"/>
+   <line id="svg_30" y2="28.81399" x2="26.41463" y1="28.81399" x1="19.89473" stroke="#191919" fill="none"/>
+   <line transform="rotate(1 23.1547 34.3068)" stroke="#191919" id="svg_31" y2="34.26057" x2="26.41464" y1="34.353" x1="19.89472" fill="none"/>
+   <ellipse ry="2.22612" rx="2.29358" id="svg_32" cy="3.39176" cx="24.46844" stroke="#191919" fill="none"/>
+  </g>
+  <text transform="matrix(0.682394 0 0 0.588619 11.0273 21.8725)" stroke="#191919" xml:space="preserve" text-anchor="start" font-family="'Asap'" font-size="24" stroke-width="0" id="svg_34" y="62.03145" x="27.41819" fill="#191919">min</text>
+ </g>
+
+</svg>
