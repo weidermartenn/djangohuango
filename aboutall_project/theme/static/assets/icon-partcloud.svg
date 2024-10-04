@@ -1,0 +1,20 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Слой 1</title>
+  <ellipse stroke="#ffffff" stroke-opacity="0" ry="9.70129" rx="9.62667" id="svg_2" cy="21.79809" cx="16.20119" stroke-width="3" fill="#ffff00"/>
+  <g id="svg_1">
+   <path fill="#e5e5e5" stroke="#e5e5e5" opacity="undefined" d="m11.86357,54.52917c-5.91948,0 -10.71426,-4.79478 -10.71426,-10.71426c0,-5.91948 4.79478,-10.71426 10.71426,-10.71426c5.91948,0 10.71426,4.79478 10.71426,10.71426c0,5.91948 -4.79478,10.71426 -10.71426,10.71426z" id="svg_5"/>
+   <path fill="#e5e5e5" opacity="undefined" d="m45.14921,54.38632c-7.73479,0 -13.99997,-6.48894 -13.99997,-14.49996c0,-8.01104 6.26518,-14.49998 13.99997,-14.49998c7.7348,0 13.99998,6.48894 13.99998,14.49998c0,8.01103 -6.26518,14.49996 -13.99998,14.49996z" id="svg_9" stroke="#e5e5e5"/>
+   <path fill="#e5e5e5" opacity="undefined" d="m27.14925,54.38631c-10.41829,0 -18.85709,-8.21505 -18.85709,-18.35709c0,-10.14206 8.4388,-18.35712 18.85709,-18.35712c10.4183,0 18.85712,8.21506 18.85712,18.35712c0,10.14204 -8.43881,18.35709 -18.85712,18.35709z" id="svg_10" stroke="#e5e5e5"/>
+   <line transform="rotate(1.80275 28.7207 49.9578)" fill="#e5e5e5" x1="11.29215" y1="50.52919" x2="46.14921" y2="49.38633" id="svg_11" stroke-width="10" stroke="#e5e5e5"/>
+  </g>
+  <line id="svg_3" y2="10.94444" x2="30.8955" y1="14.52645" x1="25.97023" stroke-width="3" stroke="#ffff00" fill="none"/>
+  <line transform="rotate(-27.6004 22.3136 8.25792)" id="svg_4" y2="6.46692" x2="24.77622" y1="10.04893" x1="19.85095" stroke-width="3" stroke="#ffff00" fill="none"/>
+  <line transform="rotate(-60.1148 14.8511 7.36242)" id="svg_6" y2="5.57141" x2="17.31369" y1="9.15343" x1="12.38842" stroke-width="3" stroke="#ffff00" fill="none"/>
+  <line transform="rotate(-84.0402 7.98552 9.30268)" id="svg_7" y2="7.51167" x2="10.44816" y1="11.09369" x1="5.52289" stroke-width="3" stroke="#ffff00" fill="none"/>
+  <line transform="rotate(-113.761 3.35875 14.0787)" id="svg_8" y2="12.28769" x2="5.82139" y1="15.86971" x1="0.89612" stroke-width="3" stroke="#ffff00" fill="none"/>
+  <line transform="rotate(-142.592 1.86624 20.6457)" id="svg_12" y2="18.85472" x2="4.32888" y1="22.43674" x1="-0.59639" stroke-width="3" stroke="#ffff00" fill="none"/>
+  <line transform="rotate(-175.8 3.35875 27.8098)" id="svg_13" y2="26.01876" x2="5.82139" y1="29.60077" x1="0.89612" stroke-width="3" stroke="#ffff00" fill="none"/>
+ </g>
+
+</svg>

@@ -8,7 +8,21 @@ module.exports = {
         fontFamily: {
             'body' : ['"Inter"', 'sans-serif'],
         },
-        extend: {},
+        extend: {
+            keyframes: {
+                gradient: {
+                  '0%': { backgroundPosition: '0% 50%' },
+                  '50%': { backgroundPosition: '100% 50%' },
+                  '100%': { backgroundPosition: '0% 50%' },
+                },
+            },
+            animation: {
+                gradient: 'gradient 5s ease infinite',
+            },
+            backgroundImage: {
+                'gradient-rainbow': 'linear-gradient(270deg, #Sky-500, #FFFFFF)',
+            },
+        },
     },
     plugins: [
         require('@tailwindcss/forms'),

@@ -6,48 +6,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="{% static 'assets/favicon-32x32.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'assets/favicon.png' %}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../static/scripts/time.js"></script>
     {% tailwind_css %}
 </head>
 
-<body class="font-body leading-normal tracking-normal">
+<body class="font-body leading-normal tracking-normal dark:bg-zinc-950">
   <!-- Header -->
-  <header class="text-black p-4 shadow-2xl fixed w-full bg-white z-20">
+  <header id="header" class="p-4 shadow-2xl fixed w-full bg-white text-black dark:bg-black dark:text-white z-20">
       <nav class="container mx-auto flex justify-between items-center">
           <a href="/" class="flex items-center gap-2">
-              <img src="{% static 'assets/logo.svg' %}" class="w-14 h-14 mr-2" alt="Logo">
+              <img src="../static/assets/logo.svg" class="w-14 h-14 mr-2" alt="Logo" id="logo">
               <p class="text-md">About All by F14 <br> Сайт обо всем</p>
           </a>
       </nav>
   </header>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const logo = document.getElementById('logo');
+        const header = document.getElementById('header');
+      
+        const updateLogo = () => {
+            const bgColor = window.getComputedStyle(header).backgroundColor;
+            logo.src = bgColor === 'rgb(0, 0, 0)' ? '{% static "assets/dark_theme/logo-dark.svg" %}' 
+            : '{% static "assets/light_theme/logo.svg" %}';
+        };
+    
+        updateLogo();
+    });
+  </script>
+
   <!-- Main container with grid -->
   <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr]">
     <!-- Sidebar -->
-    <aside class="flex flex-col bg-slate-50 shadow-md pl-4 pt-28 z-10">
+    <aside class="flex flex-col bg-slate-50/70 dark:bg-zinc-900 dark:text-white shadow-md pl-4 pt-28 z-10">
         <ul class="mt-4 font-medium">
-            <li><a href="/" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Главная</a></li>
-            <li><a href="/weather" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Погода</a></li>
-            <li><a href="#" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Курс валют</a></li>
-            <li><a href="#" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Об авторе</a></li>
-            <li><a href="/admin" target="_blank" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Админ</a></li>
-            <li><a href="https://github.com/weidermartenn/project4emp.git" target="_blank" class="block p-2 border-l-2 border-black hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Github проекта</a></li>
+            <li><a href="/" class="block p-2 border-l-2 border-black dark:border-white hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Главная</a></li>
+            <li><a href="/weather" class="block p-2 border-l-2 border-black dark:border-white hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Погода</a></li>
+            <li><a href="#" class="block p-2 border-l-2 border-black dark:border-white hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Курс валют</a></li>
+            <li><a href="#" class="block p-2 border-l-2 border-black dark:border-white hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Об авторе</a></li>
+            <li><a href="/admin" target="_blank" class="block p-2 border-l-2 border-black dark:border-white hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Админ</a></li>
+            <li><a href="https://github.com/weidermartenn/project4emp.git" target="_blank" class="block p-2 border-l-2 border-black dark:border-white hover:border-l-8 hover:border-gray-500 hover:text-gray-500 duration-150">Github проекта</a></li>
         </ul>
     </aside>
 
     <!-- Main content -->
     <div class="flex flex-col">
-      <div class="container mx-auto">
+      <div class="container mx-auto dark:bg-zinc-800">
           {% block content %}
           <!-- Контент каждой страницы будет вставляться сюда -->
           {% endblock %}
       </div>
     </div>
-</div>
+    </div>
 </body>
 </html>

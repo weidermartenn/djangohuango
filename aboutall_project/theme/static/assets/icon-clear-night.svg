@@ -1,0 +1,24 @@
+<svg width="59.99999999999999" height="59.99999999999999" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Слой 1</title>
+  <ellipse fill="url(#svg_6)" cx="30.08772" cy="30.05844" id="svg_3" rx="29.73682" ry="29.82454" stroke-opacity="0" stroke="#0f0f00"/>
+ </g>
+ <defs>
+  <linearGradient id="svg_6" x1="0" y1="0" x2="1" y2="0">
+   <stop stop-color="#020254" stop-opacity="0.99219" offset="0"/>
+   <stop stop-color="#0f0f3d" stop-opacity="0.99219" offset="0.5"/>
+   <stop stop-color="#180b26" stop-opacity="0.99609" offset="1"/>
+   <stop stop-color="0" stop-opacity="0" offset="NaN"/>
+   <stop stop-color="0" stop-opacity="0" offset="NaN"/>
+   <stop stop-color="0" stop-opacity="0" offset="NaN"/>
+   <stop stop-color="0" stop-opacity="0" offset="NaN"/>
+   <stop stop-color="0" stop-opacity="0" offset="NaN"/>
+   <stop stop-color="0" stop-opacity="0" offset="NaN"/>
+   <stop offset="NaN" stop-opacity="0" stop-color="0"/>
+   <stop offset="NaN" stop-opacity="0" stop-color="0"/>
+   <stop offset="NaN" stop-opacity="0" stop-color="0"/>
+   <stop offset="NaN" stop-opacity="0" stop-color="0"/>
+   <stop offset="NaN" stop-opacity="0" stop-color="0"/>
+  </linearGradient>
+ </defs>
+</svg>

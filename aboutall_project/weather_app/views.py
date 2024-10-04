@@ -4,38 +4,53 @@ import requests.exceptions
 from .models import City
 from datetime import datetime, timedelta
 
-weather_icons = {
-    'Clear': '/assets/icon-sun.svg',
-    'Clouds': './assets/icon-clouds.svg',
-    'Rain': './assets/icon-rain.svg',
-}
+def weather_visual(description):
+    weather_icbg = {
+        'Sunny': '../static/assets/icon-sun.svg',
+        'Clear': '../static/assets/icon-clear.svg',
+        'Partly Cloudy': '../static/assets/icon-partcloud.svg',
+        'Light rain': '../static/assets/icon-lightrain.svg',
+        'Patchy rain nearby': '../static/assets/icon-lightrainsun.svg',
+        'Overcast': '../static/assets/icon-overcast.svg',
+        'Mist': '../static/assets/icon-mist.svg',
+    }   
+
+    if description in weather_icbg:
+        return weather_icbg[description]
 
 def weather(request):
-    LANG = 'ru'
-    UNITS = 'metric'
-    API_KEY = '02586546b81e214ba2c5b751c986d399'
+    API_KEY = 'd0c69695c93247ebbee83252240410'
 
     if request.method == 'POST':
         city_name = request.POST.get('city_name')
-        print(city_name)
         if city_name:
-            url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units={}&lang={}&appid={}'
+            url = 'https://api.weatherapi.com/v1/current.json?key={}&q={}'
             try:
-                response = requests.get(url.format(city_name, UNITS, LANG, API_KEY)).json()
+                response = requests.get(url.format(API_KEY, city_name)).json()
                 data = response
+
+                description = data['current']['condition']['text']
+                print(description)
+                weather_desc = weather_visual(description)
+
                 weather_data = {
-                    'city': data['name'],
-                    'temperature': round(data['main']['temp']),
-                    'feels_like': round(data['main']['feels_like']),
-                    'min_temp': round(data['main']['temp_min']),
-                    'max_temp': round(data['main']['temp_max']),
-                    'wind_speed': data['wind']['speed'],
-                    'humidity': data['main']['humidity'],
-                    'pressure': data['main']['pressure'],
-                    'weather_icon': weather_icons.get(data['weather'][0]['main']),
+                    'time': (data['location']['localtime']).split(' ')[1],
+                    'region': (data['location']['country']),
+                    'city': (data['location']['name']),
+                    'temperature': round(data['current']['temp_c']),
+                    'feels_like': round(data['current']['feelslike_c']),
+                    'wind_speed': round(data['current']['wind_mph']),
+                    'humidity': round(data['current']['humidity']),
+                    'pressure': round(data['current']['pressure_mb']),
+                    'weather_icon': weather_desc,
                 }
-            except requests.exceptions.RequestException as e:
+            except UnboundLocalError as e:
                 print("Error fetching weather data: {}".format(str(e)))
+                weather_data = None
+            except requests.exceptions.RequestException:
+                print("Ошибка запроса")
+                weather_data = None
+            
         else:
             print("Please enter a city name.")
     else:

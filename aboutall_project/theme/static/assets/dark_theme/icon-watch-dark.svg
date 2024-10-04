@@ -1,0 +1,12 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" stroke="null">
+ <g id="Слой_1">
+  <title>Слой 1</title>
+  <ellipse fill="#fff" cx="30.06135" cy="30.18404" id="svg_1" rx="26.07362" ry="26.07362" stroke-width="5" stroke="#b2b2b2"/>
+  <line fill="none" stroke="#333333" stroke-width="3" x1="29.6319" y1="31.84049" x2="29.7546" y2="10.2454" id="svg_2"/>
+  <path transform="rotate(0.0170047 36.178 30.3169)" fill="none" stroke-width="3" opacity="undefined" d="m28.17864,30.3169l15.99872,0" id="svg_3" stroke="#333333"/>
+  <path transform="rotate(-6.10649 30.022 29.9897)" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="undefined" d="m30.02203,53.8311c-13.05825,0 -24.04737,-10.64489 -24.04737,-23.53244c0,-12.88755 10.98913,-24.15036 24.04737,-24.15036c13.05825,0 24.04737,11.3658 24.04737,24.25335c0,12.88755 -10.98913,23.42945 -24.04737,23.42945z" id="svg_5"/>
+  <line fill="none" stroke="#333333" x1="76.85891" y1="34.98455" x2="77.06488" y2="34.98455" id="svg_8"/>
+  <line fill="none" stroke="#333333" x1="-15.00515" y1="9.54686" x2="-15.00515" y2="9.64984" id="svg_10"/>
+ </g>
+
+</svg>

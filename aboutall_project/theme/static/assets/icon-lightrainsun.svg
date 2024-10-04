@@ -1,0 +1,18 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Слой 1</title>
+  <ellipse stroke="#ffff56" ry="12.03887" rx="12.23305" id="svg_21" cy="14.07779" cx="14.07762" stroke-width="2" fill="#ffff56"/>
+  <g stroke="null" id="svg_1">
+   <path stroke="#e5e5e5" fill="#e5e5e5" opacity="undefined" d="m11.46074,41.39511c-5.91948,0 -10.71426,-4.79478 -10.71426,-10.71426c0,-5.91948 4.79478,-10.71426 10.71426,-10.71426c5.91948,0 10.71426,4.79478 10.71426,10.71426c0,5.91948 -4.79478,10.71426 -10.71426,10.71426z" id="svg_5"/>
+   <path stroke="#e5e5e5" fill="#e5e5e5" opacity="undefined" d="m44.74638,41.25226c-7.73479,0 -13.99997,-6.48894 -13.99997,-14.49996c0,-8.01104 6.26518,-14.49998 13.99997,-14.49998c7.7348,0 13.99998,6.48894 13.99998,14.49998c0,8.01103 -6.26518,14.49996 -13.99998,14.49996z" id="svg_9"/>
+   <path stroke="#e5e5e5" fill="#e5e5e5" opacity="undefined" d="m26.74642,41.25225c-10.41829,0 -18.85709,-8.21505 -18.85709,-18.35709c0,-10.14206 8.4388,-18.35712 18.85709,-18.35712c10.4183,0 18.85712,8.21506 18.85712,18.35712c0,10.14204 -8.43881,18.35709 -18.85712,18.35709z" id="svg_10"/>
+   <line transform="rotate(1.80275 28.3179 36.8237)" stroke="#e5e5e5" fill="#e5e5e5" x1="10.88932" y1="37.39513" x2="45.74638" y2="36.25227" id="svg_11" stroke-width="10"/>
+  </g>
+  <line stroke="#56aaff" stroke-dasharray="5,5" id="svg_16" y2="50.19503" x2="12.76808" y1="43.41139" x1="12.76808" stroke-width="2" fill="none"/>
+  <line stroke="#56aaff" stroke-dasharray="5,5" id="svg_17" y2="49.61023" x2="46.56929" y1="43.52835" x1="46.56929" stroke-width="2" fill="none"/>
+  <line stroke="#56aaff" stroke-dasharray="5,5" id="svg_18" y2="58.73305" x2="29.14237" y1="43.52835" x1="29.14237" stroke-width="2" fill="none"/>
+  <line stroke="#56aaff" stroke-dasharray="5,5" id="svg_19" y2="57.79737" x2="20.95523" y1="43.52835" x1="20.95523" stroke-width="2" fill="none"/>
+  <line stroke="#56aaff" stroke-dasharray="5,5" id="svg_20" y2="55.22427" x2="37.79735" y1="43.52835" x1="37.79735" stroke-width="2" fill="none"/>
+ </g>
+
+</svg>

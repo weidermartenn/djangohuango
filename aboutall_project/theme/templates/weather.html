@@ -1,53 +1,80 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Погода сейчас{% endblock %}
 
 {% block content %}
-<div class="flex flex-col items-center h-screen pl-4 pt-28">
+<div class="flex flex-col items-center h-screen pl-4 pt-28" id="background">
     <div class="mt-8">
         <form method="post" action="{% url 'weather' %}">
             {% csrf_token %}
             <input type="text" name="city_name" placeholder="Введите город" class="p-2 border border-gray-800 rounded-md mr-2 focus:outline-none">
-            <button type="submit" class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 duration-150">Узнать</button>
+            <button type="submit" class="bg-gray-800 dark:bg-black text-white px-4 py-2 rounded-md hover:bg-gray-700 duration-150">Узнать</button>
         </form>
     </div>
 
     {% if weather_data %}
-    <div class="grid grid-cols-1 mt-20 border-2 border-gray-800 rounded-md p-6 w-1/2">
+    <div class="grid grid-cols-1 mt-20 border-2 border-gray-800 dark:bg-zinc-900/70 dark:text-white rounded-md p-6 w-1/2">
         <section class="flex flex-row items-center mt-2 gap-4 justify-center">
-            <img src="../static/assets/icon-watch.svg" class="w-12 h-12">
-            <p id="local-time">Время: </p>  <!-- Изменено -->
+            <img src="{% static 'assets/icon-watch.svg' %}" class="w-12 h-12" id="watch">
+            <p id="local-time">Время: {{ weather_data.time }} </p>
+            <p>Страна: {{ weather_data.region }}</p>
         </section>
         <div class="flex flex-row items-center justify-center gap-4 border-b-2 border-gray-800 p-4">
-            <img src="../static/assets/icon-clouds.svg" class="w-12 h-12">
+            <img src="{{ weather_data.weather_icon }}" class="w-12 h-12">
             <p class="text-3xl">{{ weather_data.city}}</p>
             <p class="text-3xl">{{ weather_data.temperature }} °C</p>
         </div>
         <p class="mt-4 justify-self-center">Ощущается как {{ weather_data.feels_like }} °C</p>
         <div class="mt-4 flex flex-col gap-2 text-sm text-start">
             <section class="flex flex-row gap-4 items-center">
-                <img src="../static/assets/icon-mintemp.svg" class="w-10 h-10">
-                <p>Минимальная температура: {{ weather_data.min_temp }} °C</p>
-            </section>
-            <section class="flex flex-row gap-4 items-center">
-                <img src="../static/assets/icon-maxtemp.svg" class="w-10 h-10">
-                <p>Минимальная температура: {{ weather_data.max_temp }} °C</p>
-            </section>
-            <section class="flex flex-row gap-4 items-center">
-                <img src="../static/assets/icon-wind.svg" class="w-10 h-10">
+                <img src="{% static 'assets/icon-wind.svg' %}" class="w-10 h-10" id="wind">
                 <p>Ветер: {{ weather_data.wind_speed }} м/с</p>
             </section>
             <section class="flex flex-row gap-4 items-center">
-                <img src="../static/assets/icon-humidity.svg" class="w-10 h-10">
+                <img src="{% static 'assets/icon-humidity.svg' %}" class="w-10 h-10" id="humidity">
                 <p>Влажность: {{ weather_data.humidity }}%</p>
             </section>
             <section class="flex flex-row gap-4 items-center">
-                <img src="../static/assets/icon-pressure.svg" class="w-10 h-10">
+                <img src="{% static 'assets/icon-pressure.svg' %}" class="w-10 h-10" id="pressure">
                 <p>Давление: {{ weather_data.pressure }} мм</p>
             </section>
         </div>
     </div>
     {% endif %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const watch = document.getElementById('watch');
+            const wind = document.getElementById('wind');
+            const humidity = document.getElementById('humidity');
+            const pressure = document.getElementById('pressure');
+            const header = document.getElementById('header');
+          
+            const updateLogo = () => {
+                const bgColor = window.getComputedStyle(header).backgroundColor;
+                watch.src = bgColor === 'rgb(0, 0, 0)' ? '{% static "assets/dark_theme/icon-watch-dark.svg" %}' 
+                : '{% static "assets/light_theme/icon-watch.svg" %}';
+                wind.src = bgColor === 'rgb(0, 0, 0)' ? '{% static "assets/dark_theme/icon-wind-dark.svg" %}'
+                : '{% static "assets/light_theme/icon-wind.svg" %}';
+                humidity.src = bgColor === 'rgb(0, 0, 0)' ? '{% static "assets/dark_theme/icon-humidity-dark.svg" %}'
+                : '{% static "assets/light_theme/icon-humidity.svg" %}';
+                pressure.src = bgColor === 'rgb(0, 0, 0)' ? '{% static "assets/dark_theme/icon-pressure-dark.svg" %}'
+                : '{% static "assets/light_theme/icon-pressure.svg" %}';
+            };
+            updateLogo();
+        });
+      </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const background = document.getElementById('background');
+            background.classList.add('bg-gradient-to-r', 'from-sky-500', 'to-white');
+        });
+      </script>
+
+
 </div>
+
 
 {% endblock %}
